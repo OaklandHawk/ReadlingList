@@ -41,11 +41,13 @@ class BookController: Codable {
     }
     
     private var readBooks: [Book] {
-        _ = books.filter{( $0.hasBeenRead == true )}
+        let beenRead = books.filter { $0.hasBeenRead == true }
+        return beenRead
     }
     
     private var unReadBooks: [Book] {
-        _ = books.filter{( $0.hasBeenRead == false )}
+        let notBeenRead = books.filter { $0.hasBeenRead == false }
+        return notBeenRead
     }
     
     func saveToPersistentStore() {

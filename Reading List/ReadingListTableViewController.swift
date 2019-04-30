@@ -24,9 +24,7 @@ class ReadingListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if readBooks in bookController {
-            
-        }
+       
         return 0
     }
 
